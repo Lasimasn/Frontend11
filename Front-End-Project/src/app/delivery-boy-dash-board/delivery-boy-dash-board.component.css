@@ -1,0 +1,32 @@
+.hd{
+  font-size: 60px;
+  text-shadow: 1px 1px gray;
+}
+/* .profile{ */
+  /* margin-top: 180px; */
+/* } */
+/* .container{ */
+  /* margin-top: 180px; */
+  /* color:white; */
+  /* opacity: 1; */
+  /* background-color: rgba(240,240,250,0.8); */
+/* } */
+.prof{
+  margin-top: 120px;
+  color: white;
+  background-color: rgba(56,56,56,0.8);
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../../assets/img/download.jpg");
+  opacity:1.0;
+  /* Full height */
+  height: 100%; 
+  margin-top: 70px;
+  min-height: 700px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

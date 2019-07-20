@@ -1,0 +1,242 @@
+<div class="container py-5 my-5">
+  <h1 class="py-3">Profile</h1>
+ 
+  <div class="row">
+
+    <div class="col-md-3">
+      <div *ngIf="editable=='false'" class="text-center">
+        <img contenteditable="false" id="profile" src="//placehold.it/250" alt="your image" width="250px" height="250px" />
+        <div class="form-control">
+          <input type="file" onchange="document.getElementById('profile').src = window.URL.createObjectURL(this.files[0])">
+        </div>
+      </div>
+
+      <div *ngIf="editable=='true'" class="text-center">
+        <img data-type="editable" id="profile" src="//placehold.it/250" alt="your image" width="250px" height="250px" />
+        <div class="form-control">
+          <input type="file" onchange="document.getElementById('profile').src = window.URL.createObjectURL(this.files[0])">
+        </div>
+      </div>
+    </div>
+
+      <div *ngIf="editable=='false'" class="personal-info col-md-9">
+
+        <form class="form-horizontal" >
+            
+            <div class="form-control">
+              <div class="w3-bar">
+                <div class="w3-bar-item w3-right">
+                  <img name="pencil" class="pencil"   (click)="edit()" src="../../assets/img/pen.png" height="30px" />
+                </div>
+              </div>
+              <table class="p-5">
+
+                <tr>
+                  <td>
+                    <label class="control-label">Name:</label>
+                  </td>
+                  <td>
+                    <label class="p-2">{{actor.name}}</label>
+                  </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                      <label class="control-label">Email:</label>
+                    </td>
+                    <td>
+                      <label class="p-2">{{actor.email}}</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                      <label class="control-label">Mobile No:</label>
+                    </td>
+                    <td>
+                      <label class="p-2">{{actor.mobile}}</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                      <label class="control-label">Address:</label>
+                    </td>
+                    <td>
+                      <label class="p-2">{{actor.address}}</label>
+                    </td>
+                </tr>
+
+                <tr *ngIf="role != 'deliveryBoy'">
+                    <td>
+                      <label class="control-label">Location:</label>
+                    </td>
+                    <td>
+                      <label class="p-2">{{actor.location}}</label>
+                    </td>
+                </tr>
+
+                <tr *ngIf="role == 'charity'">
+                  <td>
+                    <label class="control-label">Food Requirement</label>
+                  </td>
+                  <td>
+                      <label class="p-2">{{actor.foodRequirement}}</label>
+                  </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="control-label">Username:</label>
+                    </td>
+                    <td>
+                      <label class="p-2">{{actor.username}}</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                      <label *ngIf="role == 'restaurant'" class="control-label">Certificate No:</label>
+                      <label *ngIf="role == 'charity'" class="control-label">Certificate No:</label>
+                      <label *ngIf="role == 'deliveryBoy'" class="control-label">License No:</label>
+                    </td>
+                    <td *ngIf="role != 'deliveryBoy'">
+                      <label class="p-2">{{actor.certificateNo}}</label>
+                    </td>
+                    <td *ngIf="role == 'deliveryBoy'">
+                      <label class="p-2">{{actor.licenseNo}}</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>            
+                      <label *ngIf="role == 'restaurant'"class="control-label">Certificate Name:</label>
+                      <label *ngIf="role == 'charity'" class="control-label">Certificate Name:</label>
+                      <label *ngIf="role == 'deliveryBoy'" class="control-label">License Name:</label>
+                    </td>
+                    <td *ngIf="role != 'deliveryBoy'">              
+                      <label class="p-2">{{actor.certificateName}}</label>
+                    </td>
+                    <td *ngIf="role == 'deliveryBoy'">              
+                      <label class="p-2">{{actor.licenseName}}</label>
+                    </td>
+                </tr>
+
+              </table>
+            </div>
+          </form>
+      </div>
+
+      <div *ngIf="editable=='true'" class="col-md-9 personal-info">
+
+        <form class="form-horizontal" #form="ngForm">
+          <div class="form-control">
+
+            <table>
+
+              <tr>
+                <td>
+                  <label class="control-label">Name:</label>
+                </td>
+                <td>
+                  <input [(ngModel)]=actor.name name="name" class="p-2 form-control">
+                </td>
+              </tr>
+              
+              <tr>
+                  <td>
+                    <label class="control-label">Email:</label>
+                  </td>
+                  <td>
+                      <input [(ngModel)]=actor.email name="email" class="p-2 form-control">
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>
+                    <label class="control-label">Mobile No:</label>
+                  </td>
+                  <td>
+                      <input [(ngModel)]=actor.mobile name="mobile" class="p-2 form-control">
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>
+                    <label class="control-label">Address:</label>
+                  </td>
+                  <td>
+                      <input [(ngModel)]=actor.address name="address" class="p-2 form-control">
+                  </td>
+              </tr>
+
+              <tr *ngIf="role != 'deliveryBoy'">
+                  <td>
+                    <label class="control-label">Location:</label>
+                  </td>
+                  <td>
+                      <input [(ngModel)]=actor.location name="location" class="p-2 form-control">
+                  </td>
+              </tr>
+
+              <tr *ngIf="role == 'charity'">
+                <td>
+                  <label class="control-label">Food Requirement</label>
+                </td>
+                <td>
+                    <input [(ngModel)]=actor.foodRequirement name="certificateNo" class="p-2 form-control">
+                </td>
+              </tr>
+
+              <tr>
+                  <td>
+                      <label class="control-label">Username:</label>
+                  </td>
+                  <td>
+                      <input [(ngModel)]=actor.username name="username" class="p-2 form-control">
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>
+                    <label *ngIf="role == 'restaurant'" class="control-label">Certificate No:</label>
+                    <label *ngIf="role == 'charity'" class="control-label">Certificate No:</label>
+                    <label *ngIf="role == 'deliveryBoy'" class="control-label">License No:</label>
+                  </td>
+                  <td *ngIf="role != 'deliveryBoy'">              
+                    <input [(ngModel)]=actor.certificateNo name="certificateNo" class="p-2 form-control">
+                </td>
+                <td *ngIf="role == 'deliveryBoy'">              
+                  <input [(ngModel)]=actor.licenseNo name="licenseNo" class="p-2 form-control">
+                </td>
+              </tr>
+
+              <tr>
+                  <td>            
+                    <label *ngIf="role == 'restaurant'"class="control-label">Certificate Name:</label>
+                    <label *ngIf="role == 'charity'" class="control-label">Certificate Name:</label>
+                    <label *ngIf="role == 'deliveryBoy'" class="control-label">License Name:</label> 
+                  </td>
+                  <td *ngIf="role != 'deliveryBoy'">              
+                      <input [(ngModel)]=actor.certificateName name="certificateName" class="p-2 form-control">
+                  </td>
+                  <td *ngIf="role == 'deliveryBoy'">              
+                    <input [(ngModel)]=actor.licenseName name="licenseName" class="p-2 form-control">
+                  </td> 
+              </tr>
+
+            </table>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label"></label>
+              <div class="col-md-8">
+                <input type="button" class="btn btn-primary" value="Save Changes" (click)="update()">
+                <input type="reset" class="btn btn-default" value="Cancel" (click)="edit()">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>

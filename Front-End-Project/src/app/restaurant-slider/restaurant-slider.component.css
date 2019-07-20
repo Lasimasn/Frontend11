@@ -1,0 +1,28 @@
+/* #restName{
+    padding: 20px;
+    color: red;
+    text-align: center;
+} */
+#address, #cuisines {
+    padding-left: 20px;
+}
+#restAddress {
+    padding: 10px;   
+    padding-left: 20px;
+    text-align: justify;
+    font-size: 15px;
+}
+#restCuisines {
+    padding: 10px;   
+    padding-left: 20px;
+}
+#restImg {
+    padding-left: 20px;
+}
+/* .close {
+    padding-bottom:0px;
+} */
+
+.text-dark{
+    font-family: 'Noto Serif JP', serif;
+ }

@@ -1,0 +1,29 @@
+<div class="w3-bar" style="margin-bottom:80px;"></div>
+<div class="timeline">
+  <div class="w3-container" *ngFor="let restaurant of deliveryRoute.logs.restaurants; let i = index">
+    <div class="container left" *ngIf="i%2==0">
+      <div class="content" style= "background-color: #296678; opacity: 0.8; color: antiquewhite">
+        <h2><b>{{restaurant.restaurantName}}</b></h2>
+          <button class="btn btn-success">Picked</button>
+          <button class="btn btn-danger">Rejected</button>
+        <p>{{restaurant.location}}</p>
+      </div>
+    </div>
+    <div class="container right" *ngIf="i%2==1">
+        <div class="content" style= "background-color: #296678; opacity: 0.8; color: antiquewhite">
+          <h2><b>{{restaurant.restaurantName}}</b></h2>
+          <button class="btn btn-success">Picked</button>
+          <button class="btn btn-danger">Rejected</button>
+          <p>{{restaurant.location}}</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="container right" *ngFor="let charity of deliveryRoute.logs.charities" >
+    <div class="content" style="background-color: #262E31; opacity: 0.8; color: antiquewhite">
+      <h2><b>{{charity.charityName}}</b></h2>
+      <button class="btn btn-success">Delivered</button>
+      <p>{{charity.location}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="w3-card-4 w3-white" style="padding: 20px">
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="form-group ">
+        <label><img src="../../assets/img/salad.png" height="30px" />&nbsp;&nbsp;Veg</label>
+        <input type="number" class="form-control" name="veg" [(ngModel)]="veg">
+      </div>
+    </div>
+    <div class="col-md-3 ">
+        <label><img src="../../assets/img/turkey.png" height="30px" />&nbsp;&nbsp;Non-Veg</label>
+        <input type="number" class="form-control" name="nonveg" [(ngModel)]="nonveg">
+    </div>
+    <div class="col-md-2">
+        <label><img src="../../assets/img/weighing-scale.png" height="30px" />&nbsp;&nbsp;Total</label><br/>
+        <input type="number" value="{{ veg+nonveg }}"  class="form-control" readonly />
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-success" style="margin-top: 32px" >
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;
+          Submit
+        </button>
+        &nbsp;&nbsp;
+        <a href="/DashboardComponent#logs" class="w3-btn w3-pink w3-round w3-small" style="margin-top: 32px" >
+          <i class="fa fa-history" aria-hidden="true"></i>&nbsp;
+          Logs
+        </a>
+    </div>
+  </div>       
+</div>

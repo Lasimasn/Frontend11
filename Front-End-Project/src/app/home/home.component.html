@@ -1,0 +1,248 @@
+<!-- Header Image -->
+<div style="width: 100%">
+  <!-- <img src="assets/img/children.jpg" style="opacity: 1;min-height: 300px" width="100%"> -->
+
+
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1 class="p-4">You can Make a Difference, So Why don't you?</h1>
+      <div class="title-button p-2">
+        <button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#signUp" style="width: 250px;"><img
+            src="assets/img/donate.png" width="40px" height="40px" (click)="restaurantSetRole()" />Want To
+          Donate?</button>
+
+        <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signUp" style="width: 250px;"><img
+            src="assets/img/want.png" width="40px" height="40px" (click)="charitySetRole()" /> Want Food?</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Code-->
+<div class="modal fade" id="signUp">
+  <div class="modal-dialog">
+    <div class="modal-content m-auto">
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="container">
+          <div class="border bgOpacity">
+            <h3 class="text-center">SIGNUP</h3>
+            <app-sign-up (clickEvent)="signup($event)"></app-sign-up>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Resurant Slide Show For Home -->
+<app-restaurant-slider></app-restaurant-slider>
+<!-- End Of Resurant Slide Show For Home -->
+
+<!-- Charity Slider -->
+<app-charity-slider></app-charity-slider>
+<!-- End Of Charity Slider-->
+
+
+<!-- Want Food modal -->
+<!-- <div class="modal fade" id="wantFoodModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content"> -->
+
+      <!-- Modal Header -->
+      <!-- <div class="modal-header">
+        <h4 class="modal-title">Want Food?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div> -->
+
+      <!-- Modal body -->
+      <!-- <div class="modal-body">
+        <form>
+          <label>Name</label>
+          <input type="text" name="" class="form-control"><br>
+          <label>Address</label><br>
+          <textarea rows="3" cols="50" class="form-control"></textarea><br>
+          <label>Mobile</label>
+          <input type="number" name="" class="form-control"><br>
+          <label>Requirement</label>
+          <div class="form-inline">
+            <input type="number" placeholder="Veg" style="width: 45%;" name="" class="form-control">
+            <input type="number" placeholder="Non-Veg" style="width: 45%;margin-left: 20px;" name=""
+              class="form-control">
+          </div><br><br>
+          <button class="btn btn-dark w3-wide" style="width: 30%;">SUBMIT</button>
+          &nbsp;&nbsp;
+          <a routerLink="/FoodStatus" class="close" data-dismiss="modal">Food Status</a>
+        </form>
+      </div> -->
+
+      <!-- Modal footer -->
+      <!-- <div class="bg-dark" style="padding: 18px;">
+        <label class="text-white">&copy; Copyright Reserved Wastage Reduction</label>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<!-- Donate Food -->
+<!-- <div class="modal fade" id="donateFoodModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content"> -->
+
+      <!-- Modal Header -->
+      <!-- <div class="modal-header">
+        <h4 class="modal-title">Donate Food?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div> -->
+
+      <!-- Modal body -->
+      <!-- <div class="modal-body"> -->
+
+      <!-- </div> -->
+
+      <!-- Modal footer -->
+      <!-- <div class="bg-dark" style="padding: 18px;">
+        <label class="text-white">&copy; Copyright Reserved Wastage Reduction</label>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<div class="w3-padding-64">
+  <h1 class="w3-center "><b><span class="w3-text-yellow">Our T</span>eam</b></h1>
+  <br/>
+  <div class="container p-5">
+      <div class="row w3-padding">
+
+        <div class="col-md-3">
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm1.png" alt="Avatar"  style="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm2.jpg" alt="Avatar"  style="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm6.jpg" alt="Avatar"  sstyle="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm4.jpg" alt="Avatar"  sstyle="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+      
+        <div class="col-md-1"></div>
+
+        <div class="col-md-3" style="margin-top: 10px">
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm5.jpg" alt="Avatar"  sstyle="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3" style="margin-top: 10px" > 
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm6.jpg" alt="Avatar"  sstyle="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3" style="margin-top: 10px" >
+            <div class="container1">
+                <img class="image w3-circle" src="../../assets/img/tm7.jpg" alt="Avatar"  sstyle="width:100%;height: 250px">
+                <div class="middle">
+                  <h5>Ashutosh Khamari</h5>
+                  <h6>+91-9439191461</h6>
+                  <span>
+                    <img src="../../assets/img/facebook.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/instagram.png" height="25px"/>
+                    &nbsp;&nbsp;
+                    <img src="../../assets/img/google-plus.png" height="25px"/>
+                  </span>
+                </div>
+              </div>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+<app-home-graph></app-home-graph>
+

@@ -1,0 +1,94 @@
+  <div class="bg mt-5">
+    <!-- <div class="container">
+        <div> -->
+<div class="row"></div>
+
+            <div class="row prof justify-content-md-center" >
+              <div class="col-md-12 col-lg-12 col-12">
+                <div class="row" style="padding: 20px;margin-top: 30px;">
+                    <div class="col-lg-6 col-md-6 col-12 w3-center">
+                        <h6 class="hd w3-center" style="width: 100%;">Profile</h6>
+                        <img src="../../assets/img/prof.png" class="w3-center" width="30%" /><br><br>
+                        <button data-toggle="modal" (click)="fetchStatus()" class="btn btn-warning btn-md" style="height: 40px; font-size: 20px; align-items: center;">Status </button>
+                        &nbsp;
+                        <button routerLink="/RouteMap" (click)="routeMap()" class="btn btn-warning btn-md" style="height: 40px; font-size: 20px; align-items: center;">Route</button>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-12 w3-padding-32 w3-center">
+                        <table class="table" style="font-size: 22px;">
+                            <tr>
+                              <th>Name</th>
+                              <td>{{deliveryBoy.deliveryBoyName}}</td>
+                            </tr>
+                            <tr>
+                              <th>Email</th>
+                              <td>{{deliveryBoy.email}}</td>
+                            </tr>
+                            <tr>
+                              <th>Mobile</th>
+                              <td>{{deliveryBoy.mobile}}</td>
+                            </tr>
+                            <tr>
+                              <th>Vechile Type</th>
+                              <td>Bike</td>
+                            </tr>
+                            <tr>
+                              <th>Vechile Reg No.</th>
+                              <td>KA-MG-0143</td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-12"></div>
+                </div>
+              </div>
+             
+              <div class="col-md-4 w3-center w3-padding">
+                  <!-- <img src="../../assets/img/prof.png" width="50%" /> -->
+              </div>
+              
+              <div class="col-md-8 w3-center w3-padding">
+                
+              </div>
+            </div>
+
+</div>
+<div class="container w3-padding-64" id="charityLogs">
+  <h6 class="hd w3-center"><span class="w3-text-yellow">Delivery</span> Log</h6>
+  <div class="w3-padding-64" style="margin-top: -10px" >
+   
+
+    <!-- Single Assignment Log -->
+    <div class="w3-card-4" style="margin: 10px" >
+      <h3 class="w3-light-gray w3-padding">
+        <b>#23232</b>
+      </h3>
+      <div class="row w3-padding" style="text-align: center;" >
+       <div class="col-md-4" >
+         <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Quantity</span></h5>
+         <h6>
+          <img src="../../assets/img/salad.png" height="20px"/>&nbsp;&nbsp;Veg&nbsp;20<br><br>
+          <img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg &nbsp;30 	<br><br>
+          <img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;Total 50</h6> 
+          <hr/>
+       </div>
+       <div class="col-md-4 w3-small">
+          <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Picked From</span></h5>
+          <h6>Restaurant 1</h6>
+          
+        </div>
+
+        <div class="col-md-4 pull-bottom" >
+          <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivered To</span></h5>
+          <h6>Charity</h6>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- End Of Assignment Log -->
+    
+  </div>
+</div>
+
+
+
+

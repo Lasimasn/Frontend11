@@ -1,0 +1,118 @@
+<div class="w3-display-container w3-green" style="height:800px;">
+	<img src="../../assets/img/donating-food.jpg" height="100%" width="100%"/>
+	<div class="w3-display-middle w3-center">
+	  <span class="hd">Welcome to {{charity.name}}</span>
+	  <a href="DashboardComponent#charityLogs" class="w3-btn w3-yellow w3-large w3-round " >
+		<i class="fa fa-list" aria-hidden="true"></i>&nbsp;Charity Logs</a>
+		<button (click)="fetchStatus()" data-toggle="modal" data-target="#statusModal" class="w3-btn w3-yellow w3-large w3-round " >
+		  <i class="fa fa-list" aria-hidden="true"></i>&nbsp;Charity Status</button>
+	</div>
+  </div>
+  
+  
+  <div class="container w3-padding-64" id="charityLogs" *ngIf="charityLogs!=undefined">
+	<h6 class="hd w3-center"><span class="w3-text-yellow"></span> LOGS</h6>
+	<div class="w3-padding-64" style="margin-top: -10px" >
+	 
+  
+	  <!-- Single Assignment Log -->
+	  
+	  <div class="w3-card-4" style="margin: 10px" *ngFor="let item of charityLogs.logs">
+		<h3 class="w3-light-gray w3-padding">
+		  <b>#{{item.id}}</b>
+		  <!-- <button class="w3-btn w3-small w3-yellow w3-round w3-right" >Received</button> -->
+		</h3>
+		<div class="row w3-padding">
+		 <div class="col-md-3">
+		   <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date</span></h5>
+		   <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6> 
+		   <br/>
+		   <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Time</span></h5>
+		   <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6>
+		 </div>
+		 <div class="col-md-3 w3-small" >
+			<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
+			<h6>
+			  <img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
+			  <img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+			  <img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;{{charity.foodRequirement}}</h6> 
+			  <hr/>
+			<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Received</span></h5>
+			<h6>
+			  <img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
+			  <img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+			  <img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
+		  </div>
+		  <div class="col-md-3">
+			  <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
+			  <h6>
+				<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;{{item.charityStatus.deliveryBoyName}}
+				<br/>
+				<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;{{item.charityStatus.mobile}}
+			  </h6>
+		  </div>
+		  <div class="col-md-3">
+			  <h6>Submit Your Rating</h6>
+				  <div class="form-group">
+					<div class="rating">
+					  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					  <input style="width: 60%; font-size: 20px;" type="number" #ratedValue name="submit" placeholder="Enter rating">
+					  </div>
+				  </div>
+			  <!-- <div class="form-group">
+				<label>Review</label>
+				<textarea class="form-control"></textarea>
+			  </div> -->
+			  <div class="form-group">
+				<button type="submit" class="btn btn-success btn-lg" (click)="onRate(ratedValue.value,item.id)">Rate</button>
+			  </div>
+		</div>
+	   </div>
+	  </div>
+	</div>
+  </div>
+  
+  
+  
+  
+	  <!--Modal Code-->
+	  <div class="modal fade" id="statusModal">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+		  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h3 class="modal-title">Status</h3>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			
+			<!-- Modal body -->
+			<div class="modal-body">
+		  <table class="table table-striped">
+			<tbody>
+			  <tr>
+			  <td>Food Available</td>
+			  <td>{{foodStatus.logs.charityStatus.foodAvailable}}</td>
+			  </tr>
+			  <tr>
+			  <td>Delivery Boy Name</td>
+			  <td>{{foodStatus.logs.charityStatus.deliveryBoyName}}</td>
+			  </tr>
+			  <tr>
+			  <td>Delivery Boy Mobile</td>
+			  <td>{{foodStatus.logs.charityStatus.mobile}}</td>
+			  </tr>
+			  
+			</tbody>
+			</table>
+	
+			</div>
+			
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>

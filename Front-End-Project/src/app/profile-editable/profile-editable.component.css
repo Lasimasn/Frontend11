@@ -1,0 +1,21 @@
+#textarea {
+    min-width: 100px;
+    min-height: 30px;
+    word-break: break-all;
+    cursor: text;
+    border: 1px solid rgb(204, 200, 200);
+  }
+
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px; 
+    color: white; 
+  }
+  .pencil{
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+    cursor: pointer;
+  }  

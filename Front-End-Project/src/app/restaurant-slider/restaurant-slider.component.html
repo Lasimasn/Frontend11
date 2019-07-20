@@ -1,0 +1,88 @@
+<div class="w3-padding-64">
+<h1 class="w3-center"><b><span class="w3-text-yellow">Rest</span>aurants</b></h1>
+<br/><br/>
+<div id="demo" class="carousel slide"data-ride="carousel">
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="container">
+        <div  class="row" *ngIf="allRestaurants?.length > 0">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" *ngFor="let item of resturantSlider1" >
+            <div class="w3-card-4">
+              <img (click)="openView(item)" src="{{item.thumb}}" width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                 <label><b style="font-size: 14px" >{{item.name}}</b></label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+          <div class="row" *ngIf="allRestaurants?.length > 0">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" *ngFor="let item of resturantSlider2" >
+                  <div class="w3-card-4">
+                      <img (click)="openView(item)" src="{{item.thumb}}" width="100%" style="max-height:180px">
+                      <div class="w3-container w3-padding">
+                         <label><b style="font-size: 14px" >{{item.name}}</b></label>
+                      </div>
+                    </div>
+              </div>
+    
+            </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row" *ngIf="allRestaurants?.length > 0">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" *ngFor="let item of resturantSlider3" >
+                    <div class="w3-card-4">
+                        <img (click)="openView(item)" src="{{item.thumb}}" width="100%" style="max-height:180px">
+                        <div class="w3-container w3-padding">
+                           <label><b style="font-size: 14px" >{{item.name}}</b></label>
+                        </div>
+                      </div>
+                </div>
+      
+              </div>
+        </div>
+      </div>
+
+  </div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <i class="fas fa-chevron-left w3-text-gray w3-xxlarge"></i>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <i class="fas fa-chevron-right w3-text-gray w3-xxlarge"></i>
+  </a>
+</div>
+
+</div>
+
+<div class="w3-modal" id="viewRestaurant"  >
+  <div class="w3-modal-content" style="margin-top:200px">
+    <h5 class="w3-black w3-padding" > <h5 id="restName" ></h5><span (click)="closeView()" class="w3-text-white close w3-right"style="margin-top:10px;position:absolute;top:5px;right:20px;" >&times;</span></h5>
+    <div class="w3-container w3-padding">
+      <div class="row">
+        <div classs="col-md-6 w3-padding">
+          <img width="220px" height="200px" src="{{restImgPath}}" id="restImg"/>
+        </div>
+        <div classs="col-md-6 w3-padding">
+          <h3 id="restName" ></h3>
+          <p style = "font-family:georgia,garamond,serif;font-size:24px;"><label id="address">Address:</label></p>
+          <h5 id="restAddress" ></h5>
+          <p style = "font-family:georgia,garamond,serif;font-size:24px;"><label id="cuisines">Cuisines:</label></p>
+          <h6 id="restCuisines" ></h6>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
